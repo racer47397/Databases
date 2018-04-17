@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <ul class="section">
+            <li><img src="images/Logo%20JA.png" alt="Logo Jackson Alarmas" style="float: left; width: 80px;height: 100px; padding: 10px;"></li>
+            <li><a href="index.html" class="navbar">Inicio</a></li>
+            <li><a class="active" class="active" href="registro.html" class="navbar">Regístrate</a></li>
+            <li><a href="catalogo.html" class="navbar" align="center">Catálogo</a></li>
+            <li><a href="info.html" class="navbar">Conócenos</a></li>
+            <li id="cuenta"><button onclick="document.getElementById('popup').style.display='block'" style="width:auto;">Iniciar sesión</button></li>
+        </ul>
+        <div class="modal">
+            <form method="post" action="RegistroLogic" class="modal-content" style="border:1px solid #ccc">
+                <div class="container">
+                    <h1 style="font-size: 200%;margin-bottom: 14px;">Regístrate</h1>
+                    <p>Por favor llena los datos a continuación para hacer tu registro.</p>
+                    <hr>
+                
+                    <label for="user"><b>Nombre completo</b></label>
+                    <input type="text" placeholder="Erick David Gil Jackson" name="user" class="registro" required>
+                
+                    <label for="psw"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Contraseña" name="psw" class="registro" required>
+                
+                    <label for="psw-repeat"><b>Confirma tu contraseña</b></label>
+                    <input type="password" placeholder="Confirmar contraseña" name="psw-repeat" class="registro" required>
+                    
+                    <label for="calle"><b>Dirección</b></label>
+                    <input type="text" name="calle" placeholder="Retorno 19 Colonia Héroes de Padierna CP 14200" class="registro" required>
+                    
+                    <label for="num_tel"><b>Número telefónico</b></label>
+                    <input type="text" placeholder="5512345678" name="num_tel" class="registro" required>
+                    
+                    <p>Al crear una cuenta, usted acepta nuestros <a href="#" style="color:dodgerblue">Términos y condiciones</a> (POR AGREGAR).</p>
+                
+                    <div class="clearfix">
+                        <button type="submit" class="signupbtn">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="popup" class="modal-register">
+            <form class="modal-content" style="border:1px solid #ccc">
+                <div class="container">
+                    <span class="close">&times;</span>
+                    <h1 style="font-size: 200%;margin-bottom: 14px;">Iniciar sesión</h1>
+                    <label for="user"><b>Nombre de usuario</b></label>
+                    <input type="text" placeholder="Nombre de usuario" name="user" class="registro" required>
+                
+                    <label for="psw"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Contraseña" name="psw" class="registro" required>
+                
+                    <button type="submit" class="inicio">Acceder como cliente</button>
+                    <button type="submit" class="inicio" id="sgn_empleado">Acceder como empleado</button>
+                
+                    <p><span class="psw">¿No tienes una cuenta? Regístrate <a href="registro.html">aquí</a>.</span></p>
+                </div>
+            </form>
+        </div>
+        <script>
+            var modal = document.getElementById('popup');
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jackson Alarmas Home</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <ul class="section">
+            <li><img src="images/Logo%20JA.png" alt="Logo Jackson Alarmas" style="float: left; width: 80px;height: 100px; padding: 10px;"></li>
+            <li><a class="active" href="index.html" class="navbar">Inicio</a></li>
+            <li><a href="registro.html" class="navbar">Regístrate</a></li>
+            <li><a href="catalogo.html" class="navbar" align="center">Catálogo</a></li>
+            <li><a href="info.html" class="navbar">Conócenos</a></li>
+            <li><button onclick="document.getElementById('popup').style.display='block'" style="width:auto;" id="cuenta">Iniciar sesión</button></li>
+        </ul>
+        
+        <div class="modal">
+            <div CLASS="container">
+                <p class="modal-content texto">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate sit amet risus eget vestibulum. Vivamus congue est leo, ac volutpat nulla scelerisque non. Fusce pharetra lectus ex, id viverra turpis cursus vel. Suspendisse in dignissim lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer quis libero mi. Curabitur blandit neque non sem convallis convallis. Praesent sit amet tellus nec magna auctor blandit. Quisque sed quam dolor. Vivamus odio lectus, tempor non purus at, maximus molestie purus. Proin nec lorem ac ex efficitur varius. In condimentum efficitur viverra. Nulla nunc quam, faucibus sed odio in, sollicitudin aliquet libero. Ut placerat et felis nec rutrum.
+
+Aliquam varius, sapien vel posuere finibus, quam justo porttitor lectus, sed tempor purus lorem a dui. Praesent condimentum sit amet ex a fringilla. Nulla non volutpat massa, id vestibulum erat. Phasellus laoreet ipsum sit amet viverra tincidunt. Vivamus quis consectetur magna. Aliquam sed diam in justo tempor venenatis. Nam mauris metus, consequat ut magna vel, commodo auctor ante. Duis lacinia molestie nibh, sed egestas diam. Pellentesque commodo quis sapien vel pretium. Ut iaculis fermentum augue eu elementum. Morbi vulputate justo feugiat dui scelerisque consequat. Vivamus a risus sit amet tortor ullamcorper facilisis. Nullam nec erat lectus. Aliquam erat volutpat. 
+		</p>
+            </div>
+        </div>
+        
+        <div id="popup" class="modal-register">
+            <form method="post" action="LoginLogic" class="modal-content" style="border:1px solid #ccc">
+                <div class="container">
+                    <span class="close">&times;</span>
+                    <h1 style="font-size: 200%;margin-bottom: 14px;">Iniciar sesión</h1>
+                    <label for="user"><b>Nombre de usuario</b></label>
+                    <input type="text" placeholder="Nombre de usuario" name="user" class="registro" required>
+                
+                    <label for="psw"><b>Contraseña</b></label>
+                    <input type="password" placeholder="Contraseña" name="psw" class="registro" required>
+                
+                    <button type="submit" class="inicio">Acceder como cliente</button>
+                    <button type="submit" class="inicio" id="sgn_empleado">Acceder como empleado</button>
+                
+                    <p><span class="psw">¿No tienes una cuenta? Regístrate <a href="registro.html">aquí</a>.</span></p>
+                </div>
+            </form>
+        </div>
+        <script>
+            var modal = document.getElementById('popup');
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
