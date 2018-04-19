@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="CSS/styles.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
         <style>
-            *:not(.section) {box-sizing: border-box;}
+            *:not(.section, li) {box-sizing: border-box;}
 
             #myInput {
                 background-image: url('images/search%20icon.png');
@@ -59,7 +59,9 @@
             </div>
         </div>
             
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Busca tu producto..." title="Escribe el nombre de un producto">
+        <div class="modal" style="padding-top: 0;">
+            <div class="container">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Busca tu producto..." title="Escribe el nombre de un producto">
 
         <table id="myTable">
             <tr class="header">
@@ -82,7 +84,26 @@
                 <td>ALARMA C</td>
                 <td>$500</td>
             </tr>
+            <tr>
+                <td>ALARMA D</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <td>AlarmA E</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <td>No Alarma</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <td>nO aLaRmA 2</td>
+                <td>$500</td>
+            </tr>
         </table>
+            </div>
+        </div>
+        
 
         <script>
             function myFunction() {

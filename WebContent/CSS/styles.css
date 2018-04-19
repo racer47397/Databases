@@ -203,7 +203,7 @@ span.psw {
 
 #lel {
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 0;
 }
 
 .modal-content {
@@ -244,6 +244,9 @@ input[type=text].registro:focus, input[type=password].registro:focus {
     outline: none;
 }
 
+::placeholder {
+    opacity: .3;
+}
 /*************************************/
 /************** Botones **************/
 /*************************************/
