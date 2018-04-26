@@ -54,7 +54,7 @@ table {
 /*************************************/
 
 body{
-    background-color: #474e5d;
+    background-color: #eeeeee;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -71,7 +71,7 @@ ul {
 }
 
 .section {
-    background-color: #606060;
+    background-color: #fff;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -93,8 +93,10 @@ li a {
     text-decoration: none;
 }
 
-li a:hover {
-    background-color: black;
+li:hover a{
+    background-color: #A9A9A9;
+    color: white;
+    
 }
 
 li a.active {
@@ -121,7 +123,7 @@ li p {
 
 .navbar:link {
     display: block;
-    color: white;
+    color: black;
     text-align: center;
     padding: 16px;
     text-decoration: none;
@@ -129,7 +131,7 @@ li p {
 
 .navbar:visited {
     display: block;
-    color: white;
+    color: black;
     padding: 16px;
     text-decoration: none;
     text-color: white;
@@ -235,7 +237,7 @@ input[type=text].registro, input[type=password].registro {
     padding: 15px;
     margin: 8px 0 22px 0;
     display: inline-block;
-    border: none;
+    border-radius: 1%;
     background: #f1f1f1;
 }
 
@@ -335,3 +337,16 @@ td:not(.centrar){
 	display: block;
 }
 
+#myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}
+
+#myTable2 {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+}

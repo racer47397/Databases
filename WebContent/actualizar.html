@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Actualización del inventario</title>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="CSS/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    </head>
+    <body>
+        <ul class="section">
+            <li><img src="images/Logo%20JA.png" alt="Logo Jackson Alarmas" style="float: left; width: 80px;height: 100px; padding: 10px;"></li>
+            <!--href="index.html" -> el html debe cambiar
+            para hacer referencia al jsp de compras 
+            previas-->
+            <li><a href="compras.html" class="navbar">Compras</a></li>
+            <!--href="registro.html" -> el html debe cambiar
+            para hacer referencia al jsp de actualizar
+            inventario-->
+            <li><a class="active" href="actualizar.html" class="navbar">Inventario</a></li>
+            <li><a href="catalogo.html" class="navbar" align="center">Catálogo</a></li>
+            <li><a href="info.html" class="navbar">Conócenos</a></li>
+            <li><button onclick="document.getElementById('popup').style.display='block'" style="width:auto;" id="cuenta">Iniciar sesión</button></li>
+        </ul>
+         <form method="post" action="accion.php" enctype="multipart/form-data">
+
+Ingresa el archivo:
+
+<input name="imagen" type="file">
+
+</form>
+    </body>
+</html>
